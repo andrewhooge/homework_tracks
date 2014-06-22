@@ -1,0 +1,34 @@
+Plural version of the model detected, using singularized version. Override with --force-plural.
+      invoke  active_record
+      create    db/migrate/20140622170556_create_tturn_ins.rb
+      create    app/models/tturn_in.rb
+      invoke    test_unit
+      create      test/models/tturn_in_test.rb
+      create      test/fixtures/tturn_ins.yml
+      invoke  resource_route
+       route    resources :tturn_ins
+      invoke  scaffold_controller
+      create    app/controllers/tturn_ins_controller.rb
+      invoke    erb
+      create      app/views/tturn_ins
+      create      app/views/tturn_ins/index.html.erb
+      create      app/views/tturn_ins/edit.html.erb
+      create      app/views/tturn_ins/show.html.erb
+      create      app/views/tturn_ins/new.html.erb
+      create      app/views/tturn_ins/_form.html.erb
+      invoke    test_unit
+      create      test/controllers/tturn_ins_controller_test.rb
+      invoke    helper
+      create      app/helpers/tturn_ins_helper.rb
+      invoke      test_unit
+      create        test/helpers/tturn_ins_helper_test.rb
+      invoke    jbuilder
+      create      app/views/tturn_ins/index.json.jbuilder
+      create      app/views/tturn_ins/show.json.jbuilder
+      invoke  assets
+      invoke    coffee
+      create      app/assets/javascripts/tturn_ins.js.coffee
+      invoke    scss
+      create      app/assets/stylesheets/tturn_ins.css.scss
+      invoke  scss
+      create    app/assets/stylesheets/scaffolds.css.scss

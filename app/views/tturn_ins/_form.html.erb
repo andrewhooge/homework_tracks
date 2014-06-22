@@ -1,0 +1,53 @@
+<%= form_for(@tturn_in) do |f| %>
+  <% if @tturn_in.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tturn_in.errors.count, "error") %> prohibited this tturn_in from being saved:</h2>
+
+      <ul>
+      <% @tturn_in.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :exercises_id %><br>
+    <%= f.number_field :exercises_id %>
+  </div>
+  <div class="field">
+    <%= f.label :url %><br>
+    <%= f.text_field :url %>
+  </div>
+  <div class="field">
+    <%= f.label :completed %><br>
+    <%= f.text_field :completed %>
+  </div>
+  <div class="field">
+    <%= f.label : %><br>
+    <%= f.text_field : %>
+  </div>
+  <div class="field">
+    <%= f.label := %><br>
+    <%= f.text_field := %>
+  </div>
+  <div class="field">
+    <%= f.label :priority %><br>
+    <%= f.text_field :priority %>
+  </div>
+  <div class="field">
+    <%= f.label :default %><br>
+    <%= f.text_field :default %>
+  </div>
+  <div class="field">
+    <%= f.label := %><br>
+    <%= f.text_field := %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
