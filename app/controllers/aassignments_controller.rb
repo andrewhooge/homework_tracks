@@ -1,5 +1,6 @@
 class AassignmentsController < ApplicationController
   before_action :set_aassignment, only: [:show, :edit, :update, :destroy]
+  before_action :require_login
 
   # GET /aassignments
   # GET /aassignments.json

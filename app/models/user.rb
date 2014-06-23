@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
-  attr_accessor :password
+
+  attr_accessor :password, :password_confirmation
   before_save :encrypt_password
+  has_many :aasignments
 
   validates_confirmation_of :password
   validates_presence_of :password, :on => :create
@@ -11,6 +13,7 @@ class User < ActiveRecord::Base
     user = find_by_email(email)
     if user && user.password_hash == BCrypt::Engine.hash_secret(password, user.password_salt)
       user
+    # I understand we don't need this but want to make sure it is understood
     else
       nil
     end
