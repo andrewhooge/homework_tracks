@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
 
   attr_accessor :password, :password_confirmation
   before_save :encrypt_password
-  has_many :aasignments
+  has_many :tturn_ins
 
   validates_confirmation_of :password
   validates_presence_of :password, :on => :create
