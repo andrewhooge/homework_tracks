@@ -7,7 +7,7 @@
 
 <p>
   <strong>Description:</strong>
-  <%= @aassignment.description %>
+  <%= markdown @aassignment.description %>
 </p>
 
 <p>
@@ -19,6 +19,8 @@
   <strong>Due:</strong>
   <%= @aassignment.due %>
 </p>
+
+
 
 <%= link_to 'Edit', edit_aassignment_path(@aassignment) %> |
 <%= link_to 'Back', aassignments_path %>

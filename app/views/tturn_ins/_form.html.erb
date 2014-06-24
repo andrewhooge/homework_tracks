@@ -11,42 +11,22 @@
     </div>
   <% end %>
 
+  <% if @tturn_in.exercises_id.nil? %> "Assignment" %><br>
   <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
+    <%= f.label :exercises_id, "Exercises" %><br>
+
   </div>
-  <div class="field">
-    <%= f.label :exercises_id %><br>
-    <%= f.number_field :exercises_id %>
-  </div>
+  <% end %>
+
   <div class="field">
     <%= f.label :url %><br>
     <%= f.text_field :url %>
   </div>
   <div class="field">
     <%= f.label :completed %><br>
-    <%= f.text_field :completed %>
+    <%= f.check_box :completed %>
   </div>
-  <div class="field">
-    <%= f.label : %><br>
-    <%= f.text_field : %>
-  </div>
-  <div class="field">
-    <%= f.label := %><br>
-    <%= f.text_field := %>
-  </div>
-  <div class="field">
-    <%= f.label :priority %><br>
-    <%= f.text_field :priority %>
-  </div>
-  <div class="field">
-    <%= f.label :default %><br>
-    <%= f.text_field :default %>
-  </div>
-  <div class="field">
-    <%= f.label := %><br>
-    <%= f.text_field := %>
-  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

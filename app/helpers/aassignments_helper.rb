@@ -1,6 +1,6 @@
 module AassignmentsHelper
 
-  def kramdown(text)
+  def markdown(text)
     return sanitize Kramdown::Document.new(text).to_html
   end
 end

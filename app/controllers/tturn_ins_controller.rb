@@ -10,6 +10,7 @@ class TturnInsController < ApplicationController
   # GET /tturn_ins/1
   # GET /tturn_ins/1.json
   def show
+    @tturn_in = TturnIn.find(params[:id])
   end
 
   # GET /tturn_ins/new
@@ -25,10 +26,11 @@ class TturnInsController < ApplicationController
   # POST /tturn_ins.json
   def create
     @tturn_in = TturnIn.new(tturn_in_params)
+    @tturn_in.user_id = current_user.id
 
     respond_to do |format|
       if @tturn_in.save
-        format.html { redirect_to @tturn_in, notice: 'Tturn in was successfully created.' }
+        format.html { redirect_to @tturn_in, notice: 'Assignment Completed' }
         format.json { render :show, status: :created, location: @tturn_in }
       else
         format.html { render :new }
@@ -56,7 +58,7 @@ class TturnInsController < ApplicationController
   def destroy
     @tturn_in.destroy
     respond_to do |format|
-      format.html { redirect_to tturn_ins_url, notice: 'Tturn in was successfully destroyed.' }
+      format.html { redirect_to tturn_ins_url, notice: 'Assignment was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +71,6 @@ class TturnInsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tturn_in_params
-      params.require(:tturn_in).permit(:user_id, :exercises_id, :url, :completed, :, :=, :priority, :default, :=)
+      params.require(:tturn_in).permit(:user_id, :exercises_id, :url, :completed, :priority, :default)
     end
 end
