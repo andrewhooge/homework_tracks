@@ -1,5 +1,8 @@
 class TturnIn < ActiveRecord::Base
-  has_many :assignments
+  validates :url, presence: true
+
+  belongs_to :aassignments
   belongs_to :user
+
 
 end

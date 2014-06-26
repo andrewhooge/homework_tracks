@@ -64,7 +64,11 @@ class TturnInsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+
+    def set_aasignment
+      @aassignment = Aassignment.find(params [:exercises_id])
+    end
+
     def set_tturn_in
       @tturn_in = TturnIn.find(params[:id])
     end

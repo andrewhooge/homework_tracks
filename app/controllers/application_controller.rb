@@ -16,16 +16,7 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  # def student_status(student_id, assignment_id)
-  #   if student_completed?(student_id, assignment_id)
-  #     return "Completed"
-  #   elsif student_for_review?(student_id, assignment_id)
-  #     return "Up for review"
-  #   else
-  #     return "Incomplete"
-  #   end
-  # end
-
-
-
-end
+  def progress(aasignment)
+    tturn_in.where(user_id: session[:user_id], exercises_id: exercise.id, completed: true).any?
+    end
+  end

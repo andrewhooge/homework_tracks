@@ -11,16 +11,16 @@
     </div>
   <% end %>
 
-  <% if @tturn_in.exercises_id.nil? "Assignment" %><br>
+  <% if @tturn_in.exercises_id.nil? %>
   <div class="field">
-    <%= f.label :exercises_id, "Exercises" %><br>
+    <%= f.label :exercises_id %>
 
   </div>
   <% end %>
 
   <div class="field">
-    <%= f.label :url %><br>
-    <%= f.text_field :url %>
+    <%= f.label :url, "Link" %><br>
+    <%= f.text_field :url, placeholder: "Add Link Here" %>
   </div>
   <div class="field">
     <%= f.label :completed %><br>
