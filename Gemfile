@@ -40,3 +40,5 @@ gem 'bcrypt', '~> 3.1.7'
 gem "kramdown"
 
 gem 'foundation-rails'
+
+gem 'simple_form'

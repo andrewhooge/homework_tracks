@@ -1,15 +1,13 @@
-<h1>Listing tturn_ins</h1>
+<h1>Progress</h1>
 
 <table>
   <thead>
     <tr>
       <th>User</th>
-      <th>Exercises</th>
+      <th>Assignment</th>
       <th>Url</th>
       <th>Completed</th>
-      <th>Priority</th>
-      <th>Default</th>
-      <th colspan="3"></th>
+      <th colspan="4">Actions</th>
     </tr>
   </thead>
 
@@ -20,7 +18,6 @@
         <td><%= tturn_in.exercises_id %></td>
         <td><%= tturn_in.url %></td>
         <td><%= tturn_in.completed %></td>
-        <td><%= tturn_in.priority %></td>
         <td><%= link_to 'Show', tturn_in %></td>
         <td><%= link_to 'Edit', edit_tturn_in_path(tturn_in) %></td>
         <td><%= link_to 'Destroy', tturn_in, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -31,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Tturn in', new_tturn_in_path %>
+<a href="tturn_ins/new" class="button [radius round]">Complete</a>

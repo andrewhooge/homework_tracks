@@ -1,9 +1,8 @@
 class Aassignment < ActiveRecord::Base
-    belongs_to :user
 
   validates :title, :description, :date, :due, presence: true
   validate :due_date
-  # validate :required_or_optional
+  validate :required_or_optional
 
   private
 

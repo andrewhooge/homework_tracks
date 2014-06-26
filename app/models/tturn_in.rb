@@ -1,5 +1,5 @@
 class TturnIn < ActiveRecord::Base
-  belongs_to :assignment
+  has_many :assignments
   belongs_to :user
-  
+
 end
