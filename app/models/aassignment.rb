@@ -4,7 +4,7 @@ class Aassignment < ActiveRecord::Base
   validate :due_date
   # validate :required_or_optional
 
-  has_many :tturn_ins
+  belongs_to :user
 
   def due_date
     if date >= due

@@ -18,9 +18,7 @@
         <td><%= aassignment.description %></td>
         <td><%= aassignment.date %></td>
         <td><%= aassignment.due %></td>
-        <%= draw_progress(aassignment, current_user) %>
         </td>
-        <% end %>
         <td><%= link_to 'Show', aassignment %></td>
         <td><%= link_to 'Edit', edit_aassignment_path(aassignment) %></td>
         <td><%= link_to 'Destroy', aassignment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -31,4 +29,4 @@
 
 <br>
 
-<%= link_to 'New Aassignment', new_aassignment_path %>
+<%= link_to 'New Aassignment', new_user_aassignment_path %>

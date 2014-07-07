@@ -6,11 +6,12 @@ Rails.application.routes.draw do
 
   resources :sessions
 
-  resources :users
-
-  resources :aassignments
-
-  resources :tturn_ins
+shallow do
+  resources :users do
+    resources :aassignments
+    resources :tturn_ins
+  end
+end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
